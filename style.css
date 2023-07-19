@@ -49,3 +49,42 @@ table {
 
 /* =======CSS STARTS HERE===================================================================================================
 */ 
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.header {
+    height: 5vh;
+    background-color: aqua;
+    font-size: 3vh;
+    padding: 30px;
+}
+
+.inputSec {
+    height: 35vh;
+    background-color: limegreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#newBookButton {
+    align-self: center;
+}
+
+.bookList {
+    height: 35vh;
+    background-color: coral;
+    padding: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer {
+    height: 5vh;
+    font-size: 30px;
+    background-color: cornflowerblue;
+}
