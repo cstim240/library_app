@@ -12,6 +12,12 @@ function Book(title, author, pages, readInfo) { //constructor
 }
 
 function addBookToLibrary(){
+    let title = prompt("Enter the title of your book");
+    let author = prompt("Enter the author of your book");
+    let pages = prompt("Enter the total number of pages the book has");
+    let readInfo = prompt("Enter the number of pages you have read so far");
+    myLibrary.push(new Book(title, author, pages, readInfo));
+    console.log(displayLibrary());
 }
 
 //loops through the array amd displays each book on the page
