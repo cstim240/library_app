@@ -12,9 +12,11 @@ function Book() { //constructor
 }
 
 function addBookToLibrary(){
-    for (let i = 0; i < myLibrary.length; ++i){
-        
-    }
+}
+
+//loops thorugh the array amd displays each book on the page
+function displayLibrary(){
+
 }
 
 
