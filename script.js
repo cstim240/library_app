@@ -1,4 +1,6 @@
-function Book(title, author, pages, readInfo){
+let myLibrary = [];
+
+function Book() { //constructor
     this.title = title, 
     this.author = author, 
     this.pages = pages, 
@@ -8,3 +10,11 @@ function Book(title, author, pages, readInfo){
         this.readInfo + " yet.");
     }
 }
+
+function addBookToLibrary(){
+    for (let i = 0; i < myLibrary.length; ++i){
+        
+    }
+}
+
+
