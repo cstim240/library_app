@@ -1,6 +1,6 @@
 let myLibrary = [];
 
-function Book() { //constructor
+function Book(title, author, pages, readInfo) { //constructor
     this.title = title, 
     this.author = author, 
     this.pages = pages, 
