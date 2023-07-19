@@ -14,9 +14,11 @@ function Book(title, author, pages, readInfo) { //constructor
 function addBookToLibrary(){
 }
 
-//loops thorugh the array amd displays each book on the page
+//loops through the array amd displays each book on the page
 function displayLibrary(){
-
+    for (let i = 0; i < myLibrary.length; ++i){
+        myLibrary[i].info();
+    }
 }
 
 
