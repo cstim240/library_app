@@ -1,4 +1,5 @@
 let myLibrary = [];
+let bookCounter = 0;
 
 function Book(title, author, pages, bookCompletion) { //constructor
     this.title = title, 
@@ -19,6 +20,7 @@ function addBookToLibrary(){
     myLibrary.push(new Book(title, author, pages, bookCompletion));
     closePopup();
     clearValues();
+    displayLibrary();
 }
 
 function clearValues(){
@@ -30,8 +32,16 @@ function clearValues(){
 
 //loops through the array and displays each book on the page
 function displayLibrary(){
+    let bookListDiv = document.querySelector(".bookList");
+    bookListDiv.innerHTML = ""; //clear previous content 
+
     for (let i = 0; i < myLibrary.length; ++i){
-        myLibrary[i].info();
+        bookCounter++;
+        let book = myLibrary[i];
+        let bookParagraph = document.createElement("p");
+
+        bookParagraph.textContent = "Book " + bookCounter + ": " + book.info();
+        bookListDiv.appendChild(bookParagraph);
     }
 }
 
