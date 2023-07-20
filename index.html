@@ -16,36 +16,34 @@
         </div>
     </div>
 
-    <div class="inputSec">
 
-        <div class="popup">
-            <form method="post" class="bookEntry">
-                <h1>Add a new book</h1>
-                <div class="title">
-                    <label for="bookTitle">Title: </label>
-                    <input id="bookTitle" name="bookTitle" type="text" required />
-                </div>
-                <div class="author">
-                    <label for="bookAuthor">Author: </label>
-                    <input id="bookAuthor" name="bookAuthor" type="text" required />
-                </div>
-                <div class="pages">
-                    <label for="bookPages">Page total: </label>
-                    <input id="bookPages" name="bookPages" type="number" required />
-                </div>
-                <div class="bookComplete">
-                    <label> Have you finished reading this book? </label>
-                    <input id="finishedBook" name="finishedBook" type="checkbox" />
-                </div>
-            </form>
-
-            <div class="btns">
-                <button type="button" onclick="closePopup()">Close</button>
-                <button type="submit" onclick="addBookToLibrary()">Submit</button>
+    <div class="popup">
+        <form method="post" class="bookEntry">
+            <h1>Add a new book</h1>
+            <div class="title">
+                <label for="bookTitle">Title: </label>
+                <input id="bookTitle" name="bookTitle" type="text" required />
             </div>
+            <div class="author">
+                <label for="bookAuthor">Author: </label>
+                <input id="bookAuthor" name="bookAuthor" type="text" required />
+            </div>
+            <div class="pages">
+                <label for="bookPages">Page total: </label>
+                <input id="bookPages" name="bookPages" type="number" required />
+            </div>
+            <div class="bookComplete">
+                <label> Have you finished reading this book? </label>
+                <input id="finishedBook" name="finishedBook" type="checkbox" />
+            </div>
+        </form>
+
+        <div class="btns">
+            <button type="button" onclick="closePopup()">Close</button>
+            <button type="submit" onclick="addBookToLibrary()">Submit</button>
         </div>
-        
     </div>
+
     
     <div class="bookList">
     </div>
