@@ -82,11 +82,11 @@ body {
 }
 
 .bookList {
-    height: 35vh;
     background-color: coral;
     padding: 3vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, 290px);
+    grid-auto-rows: minmax(35vh, auto); /* allows the height to grow automatically of the div if needed*/
     gap: 50px;
 }
 
