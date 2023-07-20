@@ -5,7 +5,7 @@ function Book(title, author, pages, bookCompletion) { //book obj constructor
     this.title = title, 
     this.author = author, 
     this.pages = pages, 
-    this.bookCompletion = bookCompletion
+    this.bookCompletion = (bookCompletion? true : false)
     this.info = function(){
         return (this.title + " by " + this.author + ", " + this.pages + " pages, " +
         this.bookCompletion + " yet.");
@@ -16,7 +16,8 @@ function addBookToLibrary(){
     let title = document.getElementById("bookTitle").value;
     let author = document.getElementById("bookAuthor").value;
     let pages = document.getElementById("bookPages").value;
-    let bookCompletion = document.getElementById("finishedBook").value;
+    let checkbox = document.getElementById("finishedBook"); //we don't need the value of the checkbox
+    let bookCompletion = checkbox.checked; //the checkbox's .checked property directly gives us the boolean value indicating whether the checkbox is checked or not (t/f)
     myLibrary.push(new Book(title, author, pages, bookCompletion));
     closePopup();
     clearValues();
