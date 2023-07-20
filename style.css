@@ -67,7 +67,7 @@ body {
 }
 
 .inputSec {
-    height: 35vh;
+    height: 0vh;
     background-color: limegreen;
 }
 
@@ -87,7 +87,7 @@ body {
 
 /*Following declarations after for the card section*/
 .bookCard {
-    height: 30vh;
+    height: 60vh;
     background-color: antiquewhite;
     width: 290px;
     display: flex;
@@ -124,8 +124,8 @@ body {
     border-radius: 6px;
     position: absolute;
     top: 20px; /* starting points for the scaled down popup div*/
-    right: 50px;
-    transform: translate(100%, -100%) scale(0.1); 
+    right: 20px;
+    transform: translate(100%, 0%) scale(0.1); /*(x, y coordinates) remember top left corner is 0,0 */
     text-align: center;
     padding: 20px;
     visibility: hidden;
