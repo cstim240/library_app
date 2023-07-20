@@ -73,6 +73,8 @@ body {
 
 #newBookButton {
     align-self: center;
+    padding: 10px;
+    background-color: blanchedalmond;
 }
 
 .bookList {
