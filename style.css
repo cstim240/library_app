@@ -62,12 +62,13 @@ body {
     font-size: 4vh;
     padding: 30px;
     font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
 }
 
 .inputSec {
     height: 35vh;
     background-color: limegreen;
-    display: flex;
 }
 
 #newBookButton {
@@ -122,15 +123,18 @@ body {
     background: white;
     border-radius: 6px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 20px; /* starting points for the scaled down popup div*/
+    right: 50px;
+    transform: translate(100%, -100%) scale(0.1); 
     text-align: center;
     padding: 20px;
     visibility: hidden;
+    transition: transform 0.4s, top 0.5s, right 0.4s;
 }
 
 .open-popup {
     visibility: visible;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    right: 50%;
+    transform: translate(50%, -50%) scale(1);
 }
