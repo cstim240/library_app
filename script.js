@@ -18,7 +18,6 @@ function addBookToLibrary(){
     let pages = document.getElementById("bookPages");
     let readInfo = document.getElementById("finishedBook");
     myLibrary.push(new Book(title, author, pages, readInfo));
-    console.log(displayLibrary());
 }
 
 //loops through the array amd displays each book on the page
