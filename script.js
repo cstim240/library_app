@@ -1,5 +1,4 @@
 let myLibrary = [];
-let bookCounter = 0;
 
 function Book(title, author, pages, bookCompletion) { //book obj constructor
     this.title = title, 
@@ -32,6 +31,7 @@ function clearValues(){
 
 //loops through the array and displays each book on the page through a div card
 function displayLibrary(){
+    let bookCounter = 0;
     let bookListDiv = document.querySelector(".bookList");
     bookListDiv.innerHTML = ""; //clear previous content 
 
@@ -58,9 +58,35 @@ function setupCard(book, bookListDiv){
     authorP.textContent = "Author: " + book.author;
     bookCard.appendChild(authorP);
 
-    let pageP = document.createElement("p");
+    let pageP = document.createElement("p"); //page # paragraph elem
     pageP.textContent = "Pages: " + book.pages;
     bookCard.appendChild(pageP);
+
+    let optionsDiv = document.createElement("div"); //for .cardOptions div
+    optionsDiv.classList.add("cardOptions");
+
+    let inputDiv = document.createElement("div"); //for our checkbox div
+    let inputLabel = document.createElement("label");
+    inputLabel.textContent = "Completed: ";
+    let inputBox = document.createElement("input"); //for the actual input checkbox
+    inputBox.type("checkbox");
+    inputBox.checked = book.bookCompletion; //places the book obj's completion status as the state of the checkbox box
+    inputBox.disabled = true;
+
+    let removeDiv = document.createElement("div");
+    let removeLabel = document.createElement("label");
+    removeLabel.textContent = "Remove?";
+    let removeBtn = document.createElement("button");
+    removeBtn.textContent = "X";
+
+    removeDiv.appendChild(removeBtn);
+    removeDiv.appendChild(removeLabel);
+    bookCard.appendChild(removeDiv);
+    inputDiv.appendChild(inputBox);
+    inputDiv.appendChild(inputLabel);
+    optionsDiv.appendChild(inputDiv);
+    bookCard.appendChild(optionsDiv); //finally adds the options div to our main bookCard div
+    bookListDiv.appendChild(bookCard);
 }
 
 //popup form feature
