@@ -78,6 +78,7 @@ function setupCard(book, bookListDiv){
     let removeLabel = document.createElement("label");
     removeLabel.textContent = "Remove?";
     let removeBtn = document.createElement("button");
+    removeBtn.classList.add("removeButton")
     removeBtn.textContent = "X";
 
     removeDiv.appendChild(removeBtn);
