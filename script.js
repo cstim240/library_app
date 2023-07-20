@@ -43,6 +43,7 @@ function displayLibrary(){
         bookParagraph.textContent = "Book " + bookCounter + ": " + book.info();
         bookListDiv.appendChild(bookParagraph);
     }
+    //next tip, append a singular class that will style the book details
 }
 
 //popup form feature
