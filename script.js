@@ -72,7 +72,6 @@ function setupCard(book, bookListDiv){
     let inputBox = document.createElement("input"); //for the actual input checkbox
     inputBox.type ="checkbox";
     inputBox.checked = book.bookCompletion; //places the book obj's completion status as the state of the checkbox box
-    inputBox.disabled = true;
 
     let removeDiv = document.createElement("div");
     let removeLabel = document.createElement("label");
@@ -107,7 +106,7 @@ function addPremadeBook(){
     let sampleTitle = "Harry Potter and The Sorcerer's Stone";
     let sampleAuthor = "Author: J. K. Rowling";
     let samplePages = "309";
-    let sampleCompletion = true;
+    let sampleCompletion = false;
 
     myLibrary.push( new Book(sampleTitle, sampleAuthor, samplePages, sampleCompletion));
     displayLibrary();
