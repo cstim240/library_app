@@ -18,13 +18,13 @@
         </div>
         
         <div class="popup">
-            <div class="bookEntry">
+            <form class="bookEntry">
                 <h1>Add a new book</h1>
                 <div class="title">
                     <label for="bookTitle">Title</label>
-                    <input id="bookTitle" type="text" />
+                    <input id="bookTitle" name="bookTitle" type="text" />
                 </div>
-            </div>
+            </form>
             <div class="btns">
                 <button type="button" onclick="closePopup()">Close</button>
                 <button onclick="addBookToLibrary()">Submit</button>
