@@ -1,7 +1,7 @@
 let myLibrary = [];
 let bookCounter = 0;
 
-function Book(title, author, pages, bookCompletion) { //constructor
+function Book(title, author, pages, bookCompletion) { //book obj constructor
     this.title = title, 
     this.author = author, 
     this.pages = pages, 
