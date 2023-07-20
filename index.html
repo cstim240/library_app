@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css"  />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -13,16 +13,15 @@
     </div>
 
     <div class="inputSec">
-        <button id="newBookButton" onclick="addBookToLibrary()">NEW BOOK</button>
-
-        <div>
-            <form>
-                <div>
-                    <label></label>
-                    <input />
-                </div>
-
-            </form>
+        <div class="container">
+            <button id="newBookButton" onclick="openPopup()">NEW BOOK</button>
+        </div>
+        
+        <div class="popup" id="popup">
+            <h2>Thank you!</h2>
+            <p>Your details has been successfully submitted. Thanks!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+            
         </div>
     </div>
     

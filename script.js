@@ -27,4 +27,13 @@ function displayLibrary(){
     }
 }
 
+let popup = document.getElementById("popup");
+function openPopup(){
+    popup.classList.add("open-popup"); //makes the popup visible on the screen
+}
+
+function closePopup(){
+    popup.classList.remove("open-popup"); //removes the popup
+}
+
 

@@ -59,8 +59,9 @@ body {
 .header {
     height: 5vh;
     background-color: aqua;
-    font-size: 3vh;
+    font-size: 4vh;
     padding: 30px;
+    font-weight: bolder;
 }
 
 .inputSec {
@@ -71,8 +72,11 @@ body {
     justify-content: center;
 }
 
-#newBookButton {
+.container {
     align-self: center;
+}
+
+#newBookButton {
     padding: 10px;
     background-color: blanchedalmond;
 }
@@ -89,4 +93,22 @@ body {
     height: 5vh;
     font-size: 30px;
     background-color: cornflowerblue;
+}
+
+.popup {
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 20px;
+    visibility: hidden;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
