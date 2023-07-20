@@ -38,17 +38,29 @@ function displayLibrary(){
     for (let i = 0; i < myLibrary.length; ++i){
         bookCounter++;
         let book = myLibrary[i];
-        setupCard(book);
+        setupCard(book, bookListDiv);
     }
     //next tip, append a singular class that will style the book details
 }
 
 //setup for each div card, including own classes for styling
-function setupCard(book){
+function setupCard(book, bookListDiv){
     let bookCard = document.createElement("div");
+    bookCard.classList.add("bookCard"); //assigns the class .bookCard to the div which encapsulates the card's contents
 
-        bookParagraph.textContent = "Book " + bookCounter + ": " + book.info();
-        bookListDiv.appendChild(bookParagraph);
+    let cardTitle = document.createElement("div"); //creates a div which holds the title p elem
+    cardTitle.classList.add("cardTitle");
+    let titleP = document.createElement("p");  //creates the p element which holds the title
+    titleP.textContent = book.title;
+    cardTitle.appendChild(titleP); //adds the p element as a child of the cardTitle div elem
+
+    let authorP = document.createElement("p"); //the author paragraph elem
+    authorP.textContent = "Author: " + book.author;
+    bookCard.appendChild(authorP);
+
+    let pageP = document.createElement("p");
+    pageP.textContent = "Pages: " + book.pages;
+    bookCard.appendChild(pageP);
 }
 
 //popup form feature
