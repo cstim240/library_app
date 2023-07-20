@@ -1,3 +1,4 @@
+'use strict';
 let myLibrary = [];
 
 function Book(title, author, pages, bookCompletion) { //book obj constructor
