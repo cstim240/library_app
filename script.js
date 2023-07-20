@@ -69,7 +69,7 @@ function setupCard(book, bookListDiv){
     let inputLabel = document.createElement("label");
     inputLabel.textContent = "Completed: ";
     let inputBox = document.createElement("input"); //for the actual input checkbox
-    inputBox.type("checkbox");
+    inputBox.type ="checkbox";
     inputBox.checked = book.bookCompletion; //places the book obj's completion status as the state of the checkbox box
     inputBox.disabled = true;
 
