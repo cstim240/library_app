@@ -30,7 +30,7 @@ function clearValues(){
     document.getElementById("finishedBook").value = '';
 }
 
-//loops through the array and displays each book on the page
+//loops through the array and displays each book on the page through a div card
 function displayLibrary(){
     let bookListDiv = document.querySelector(".bookList");
     bookListDiv.innerHTML = ""; //clear previous content 
@@ -38,12 +38,17 @@ function displayLibrary(){
     for (let i = 0; i < myLibrary.length; ++i){
         bookCounter++;
         let book = myLibrary[i];
-        let bookParagraph = document.createElement("p");
+        setupCard(book);
+    }
+    //next tip, append a singular class that will style the book details
+}
+
+//setup for each div card, including own classes for styling
+function setupCard(book){
+    let bookCard = document.createElement("div");
 
         bookParagraph.textContent = "Book " + bookCounter + ": " + book.info();
         bookListDiv.appendChild(bookParagraph);
-    }
-    //next tip, append a singular class that will style the book details
 }
 
 //popup form feature
