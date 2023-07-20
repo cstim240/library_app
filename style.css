@@ -86,7 +86,8 @@ body {
     background-color: coral;
     padding: 3vw;
     display: grid;
-    grid-template-columns: repeat(autofit, 290px);
+    grid-template-columns: repeat(auto-fit, 290px);
+    gap: 50px;
 }
 
 /*Following declarations after for the card section*/
