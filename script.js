@@ -1,23 +1,23 @@
 let myLibrary = [];
 
-function Book(title, author, pages, readInfo) { //constructor
+function Book(title, author, pages, bookCompletion) { //constructor
     this.title = title, 
     this.author = author, 
     this.pages = pages, 
-    this.readInfo = readInfo
+    this.bookCompletion = bookCompletion
     this.info = function(){
         return (this.title + " by " + this.author + ", " + this.pages + " pages, " +
-        this.readInfo + " yet.");
+        this.bookCompletion + " yet.");
     }
 }
 
 function addBookToLibrary(){
+    let title = document.getElementById("bookTitle").value;
+    let author = document.getElementById("bookAuthor").value;
+    let pages = document.getElementById("bookPages").value;
+    let bookCompletion = document.getElementById("finishedBook").value;
+    myLibrary.push(new Book(title, author, pages, bookCompletion));
     closePopup();
-    let title = document.getElementById("bookTitle");
-    let author = document.getElementById("bookAuthor");
-    let pages = document.getElementById("bookPages");
-    let readInfo = document.getElementById("finishedBook");
-    myLibrary.push(new Book(title, author, pages, readInfo));
 }
 
 //loops through the array amd displays each book on the page
