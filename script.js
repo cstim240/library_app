@@ -99,5 +99,18 @@ function closePopup(){
     popup.classList.remove("open-popup"); //removes the popup
     clearValues();
 }
-//
+
+
+//add premade book
+function addPremadeBook(){
+    let sampleTitle = "Harry Potter and The Sorcerer's Stone";
+    let sampleAuthor = "Author: J. K. Rowling";
+    let samplePages = "309";
+    let sampleCompletion = true;
+
+    myLibrary.push( new Book(sampleTitle, sampleAuthor, samplePages, sampleCompletion));
+    displayLibrary();
+}
+
+addPremadeBook();
 
