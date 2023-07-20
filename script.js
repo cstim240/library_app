@@ -18,9 +18,17 @@ function addBookToLibrary(){
     let bookCompletion = document.getElementById("finishedBook").value;
     myLibrary.push(new Book(title, author, pages, bookCompletion));
     closePopup();
+    clearValues();
 }
 
-//loops through the array amd displays each book on the page
+function clearValues(){
+    document.getElementById("bookTitle").value = '';
+    document.getElementById("bookAuthor").value = '';
+    document.getElementById("bookPages").value = '';
+    document.getElementById("finishedBook").value = '';
+}
+
+//loops through the array and displays each book on the page
 function displayLibrary(){
     for (let i = 0; i < myLibrary.length; ++i){
         myLibrary[i].info();
@@ -35,6 +43,7 @@ function openPopup(){
 
 function closePopup(){
     popup.classList.remove("open-popup"); //removes the popup
+    clearValues();
 }
-
+//
 
