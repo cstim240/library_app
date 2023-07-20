@@ -68,12 +68,6 @@ body {
     height: 35vh;
     background-color: limegreen;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.container {
-    align-self: center;
 }
 
 #newBookButton {
