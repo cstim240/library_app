@@ -86,7 +86,7 @@ body {
     background-color: coral;
     padding: 3vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(autofit, 1fr);
 }
 
 .footer {
