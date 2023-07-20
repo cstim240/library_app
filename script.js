@@ -12,6 +12,7 @@ function Book(title, author, pages, readInfo) { //constructor
 }
 
 function addBookToLibrary(){
+    closePopup();
     let title = prompt("Enter the title of your book");
     let author = prompt("Enter the author of your book");
     let pages = prompt("Enter the total number of pages the book has");
@@ -27,7 +28,8 @@ function displayLibrary(){
     }
 }
 
-let popup = document.getElementById("popup");
+//popup form feature
+let popup = document.querySelector(".popup");
 function openPopup(){
     popup.classList.add("open-popup"); //makes the popup visible on the screen
 }

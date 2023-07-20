@@ -17,10 +17,18 @@
             <button id="newBookButton" onclick="openPopup()">NEW BOOK</button>
         </div>
         
-        <div class="popup" id="popup">
-            <h2>Thank you!</h2>
-            <p>Your details has been successfully submitted. Thanks!</p>
-            <button type="button" onclick="closePopup()">OK</button>
+        <div class="popup">
+            <div class="bookEntry">
+                <h1>Add a new book</h1>
+                <div class="title">
+                    <label for="bookTitle">Title</label>
+                    <input id="bookTitle" type="text" />
+                </div>
+            </div>
+            <div class="btns">
+                <button type="button" onclick="closePopup()">Close</button>
+                <button onclick="addBookToLibrary()">Submit</button>
+            </div>
             
         </div>
     </div>
