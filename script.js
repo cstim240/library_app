@@ -78,8 +78,11 @@ function setupCard(book, bookListDiv){
     let removeLabel = document.createElement("label");
     removeLabel.textContent = "Remove?";
     let removeBtn = document.createElement("button");
-    removeBtn.classList.add("removeButton")
     removeBtn.textContent = "X";
+
+    removeBtn.addEventListener("click", function(){
+        removeBook(book);
+    });
 
     removeDiv.appendChild(removeBtn);
     removeDiv.appendChild(removeLabel);
@@ -89,6 +92,17 @@ function setupCard(book, bookListDiv){
     optionsDiv.appendChild(inputDiv);
     bookCard.appendChild(optionsDiv); //finally adds the options div to our main bookCard div
     bookListDiv.appendChild(bookCard);
+}
+
+//remove button functionality
+function removeBook(book){
+    //find the index of the book in the myLib array
+    const indexToRemove = myLibrary.indexOf(book);
+
+    if (indexToRemove !== -1){ // we use -1 to represent if the element is not found in the myLibrary array
+        myLibrary.splice(indexToRemove, 1);
+        displayLibrary();
+    }
 }
 
 //popup form feature
