@@ -13,10 +13,10 @@ function Book(title, author, pages, readInfo) { //constructor
 
 function addBookToLibrary(){
     closePopup();
-    let title = prompt("Enter the title of your book");
-    let author = prompt("Enter the author of your book");
-    let pages = prompt("Enter the total number of pages the book has");
-    let readInfo = prompt("Enter the number of pages you have read so far");
+    let title = document.getElementById("bookTitle");
+    let author = document.getElementById("bookAuthor");
+    let pages = document.getElementById("bookPages");
+    let readInfo = document.getElementById("finishedBook");
     myLibrary.push(new Book(title, author, pages, readInfo));
     console.log(displayLibrary());
 }
