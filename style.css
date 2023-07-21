@@ -66,17 +66,13 @@ body {
     justify-content: space-between;
 }
 
-.inputSec {
-    height: 0vh;
-    background-color: limegreen;
-}
-
 #newBookButton {
     padding: 10px;
     background-color: blanchedalmond;
 }
 
 .bookList {
+    height: 70vh;
     background-color: coral;
     padding: 3vw;
     display: grid;
@@ -87,7 +83,7 @@ body {
 
 /*Following declarations after for the card section*/
 .bookCard {
-    height: 60vh;
+    height: 55%;
     background-color: antiquewhite;
     width: 290px;
     display: flex;
