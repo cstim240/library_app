@@ -50,12 +50,12 @@ table {
 /* =======CSS STARTS HERE===================================================================================================
 */ 
 
-body {
-    height: 100vh;
+html, body {
+    height: 100%;
     width: 100vw;
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .header {
@@ -78,6 +78,7 @@ body {
     background-color: coral;
     padding: 3vh;
 }
+
 .bookList {
     display: grid;
     grid-template-columns: repeat(auto-fit, 290px);
@@ -110,8 +111,6 @@ body {
     padding-right: 10px;
 }
 
-
-
 .footer {
     height: 25px;
     font-size: 15px;
@@ -139,3 +138,15 @@ body {
     transform: translate(50%, -50%) scale(1);
 }
 
+@media all and (min-width: 320px) and (max-width: 480px){
+    .header {
+        height: 10%;
+        font-size: 1.75em;
+        justify-content: space-between;
+    }
+
+    .bookContainer {
+        flex-grow: 1;
+        
+    }
+}
