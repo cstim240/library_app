@@ -80,7 +80,7 @@ html, body {
     background-color: #F1F1F1;
     color: #F2BAC9;
     font-weight: bolder;
-    box-shadow: 0px 2px 15px #BF1363;
+    box-shadow: 0px 2px 1px #BF1363;
 }
 
 #newBookButton:hover {
@@ -249,6 +249,10 @@ html, body {
     background-color: #BF1363;
     color: #F1F1F1;
     box-shadow: 0px;
+}
+
+input[type=checkbox]{
+    accent-color: #BF1363;
 }
 
 
