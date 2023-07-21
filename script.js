@@ -56,7 +56,7 @@ function setupCard(book, bookListDiv){
     titleP.textContent = book.title;
     cardTitle.appendChild(titleP); //adds the p element as a child of the cardTitle div elem
     bookCard.appendChild(cardTitle);
-    
+
     let authorP = document.createElement("p"); //the author paragraph elem
     authorP.textContent = "Author: " + book.author;
     bookCard.appendChild(authorP);
@@ -91,6 +91,7 @@ function setupCard(book, bookListDiv){
     inputDiv.appendChild(inputBox);
     inputDiv.appendChild(inputLabel);
     optionsDiv.appendChild(inputDiv);
+    optionsDiv.appendChild(removeDiv);
     bookCard.appendChild(optionsDiv); //finally adds the options div to our main bookCard div
     bookListDiv.appendChild(bookCard);
 }
