@@ -120,15 +120,11 @@ function closePopup(){
 
 
 //add premade book
-function addPremadeBook(){
-    let sampleTitle = "Harry Potter and The Sorcerer's Stone";
-    let sampleAuthor = "J. K. Rowling";
-    let samplePages = "309";
-    let sampleCompletion = false;
-
-    myLibrary.push(new Book(sampleTitle, sampleAuthor, samplePages, sampleCompletion));
+function addPremadeBook(title, author, pages, completion){
+    myLibrary.push(new Book(title, author, pages, completion));
     displayLibrary();
 }
 
-addPremadeBook();
+addPremadeBook("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
+addPremadeBook("A Game Of Thrones", "George R.R. Martin", "694", true);
 
