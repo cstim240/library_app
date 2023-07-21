@@ -72,18 +72,18 @@ body {
 }
 
 .bookList {
-    height: 70vh;
+    height: 80%;
     background-color: coral;
     padding: 3vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, 290px);
-    grid-auto-rows: minmax(35vh, auto); /* allows the height to grow automatically of the div if needed*/
-    gap: 50px;
+    grid-auto-rows: minmax(280px, auto);  /*allows the height to grow automatically of the div if needed*/
+    column-gap: 60px;
 }
 
 /*Following declarations after for the card section*/
 .bookCard {
-    height: 55%;
+    height: 25vh;
     background-color: antiquewhite;
     width: 290px;
     display: flex;
