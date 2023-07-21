@@ -55,7 +55,8 @@ function setupCard(book, bookListDiv){
     let titleP = document.createElement("p");  //creates the p element which holds the title
     titleP.textContent = book.title;
     cardTitle.appendChild(titleP); //adds the p element as a child of the cardTitle div elem
-
+    bookCard.appendChild(cardTitle);
+    
     let authorP = document.createElement("p"); //the author paragraph elem
     authorP.textContent = "Author: " + book.author;
     bookCard.appendChild(authorP);
@@ -120,11 +121,11 @@ function closePopup(){
 //add premade book
 function addPremadeBook(){
     let sampleTitle = "Harry Potter and The Sorcerer's Stone";
-    let sampleAuthor = "Author: J. K. Rowling";
+    let sampleAuthor = "J. K. Rowling";
     let samplePages = "309";
     let sampleCompletion = false;
 
-    myLibrary.push( new Book(sampleTitle, sampleAuthor, samplePages, sampleCompletion));
+    myLibrary.push(new Book(sampleTitle, sampleAuthor, samplePages, sampleCompletion));
     displayLibrary();
 }
 
