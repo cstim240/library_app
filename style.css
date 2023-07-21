@@ -51,13 +51,14 @@ table {
 */ 
 
 body {
+    height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .header {
-    height: 5vh;
+    height: 50px;
     background-color: aqua;
     font-size: 4vh;
     padding: 30px;
@@ -70,11 +71,13 @@ body {
     padding: 10px;
     background-color: blanchedalmond;
 }
-
-.bookList {
-    height: 80%;
+.bookContainer {
+    flex-grow: 1;
+    height: calc(100% - 50px);
     background-color: coral;
-    padding: 3vw;
+    padding: 3vh;
+}
+.bookList {
     display: grid;
     grid-template-columns: repeat(auto-fit, 290px);
     grid-auto-rows: minmax(280px, auto);  /*allows the height to grow automatically of the div if needed*/
@@ -109,7 +112,7 @@ body {
 
 
 .footer {
-    height: 5vh;
+    height: 25px;
     font-size: 15px;
     background-color: cornflowerblue;
 }
