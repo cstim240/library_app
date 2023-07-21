@@ -51,6 +51,7 @@ table {
 */ 
 
 html, body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -87,6 +88,8 @@ html, body {
     background-color: #CEEAF7;
     padding: 3vh;
 }
+
+
 
 .bookList {
     display: grid;
@@ -141,14 +144,15 @@ html, body {
     background-color: #F1F1F1;
     padding: 30px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .popup {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     width: 100%;
     height: 100%;
     background: #F2BAC9;
@@ -166,11 +170,25 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 20px;
 }
 
 .bookEntry h1 {
     font-size: 25px;
     font-weight: bold;
+}
+
+#bookTitle, #bookAuthor, #bookPages {
+    width: 210px;
+    border: 0px;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.title, .author, .pages {
+    display: flex;
+    justify-content: space-between;
 }
 
 .open-popup {
@@ -179,6 +197,30 @@ html, body {
     right: 50%;
     transform: translate(50%, -50%) scale(1);
 }
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns button {
+    border: 0px;
+    border-radius: 10%;
+    background-color: #F1F1F1;
+    color: #BF1363;
+    box-shadow: 0px 2px 1px #F2BAC9;
+    font-size: 18px;
+}
+
+.btns button:hover {
+    background-color: #CEEAF7;
+}
+
+.btns button:active {
+    background-color: #F2BAC9;
+}
+
+
 
 @media all and (min-width: 320px) and (max-width: 480px){
     .header {
