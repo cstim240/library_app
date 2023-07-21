@@ -82,6 +82,16 @@ html, body {
     font-weight: bolder;
     box-shadow: 0px 2px 15px #BF1363;
 }
+
+#newBookButton:hover {
+    background-color: #CEEAF7;
+}
+
+#newBookButton:active {
+    background-color: #BF1363;
+    color: #F1F1F1;
+    box-shadow: 0px;
+}
 .bookContainer {
     flex-grow: 1;
     /*height: calc(100% - 85px - 3vh);*/
@@ -217,7 +227,9 @@ html, body {
 }
 
 .btns button:active {
-    background-color: #F2BAC9;
+    background-color: #BF1363;
+    color: #F1F1F1;
+    box-shadow: 0px;
 }
 
 
