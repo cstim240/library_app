@@ -52,6 +52,7 @@ table {
 
 body {
     height: 100vh;
+    width: 100vw;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -60,7 +61,7 @@ body {
 .header {
     height: 50px;
     background-color: aqua;
-    font-size: 4vh;
+    font-size: 40px;
     padding: 30px;
     font-weight: bolder;
     display: flex;
@@ -73,7 +74,7 @@ body {
 }
 .bookContainer {
     flex-grow: 1;
-    height: calc(100% - 50px);
+    /*height: calc(100% - 85px - 3vh);*/
     background-color: coral;
     padding: 3vh;
 }
@@ -137,3 +138,4 @@ body {
     right: 50%;
     transform: translate(50%, -50%) scale(1);
 }
+
