@@ -77,7 +77,7 @@ function setupCard(book, bookListDiv){
 
     let removeDiv = document.createElement("div");
     let removeLabel = document.createElement("label");
-    removeLabel.textContent = "Remove?";
+    removeLabel.textContent = "Remove: ";
     let removeBtn = document.createElement("button");
     removeBtn.textContent = "X";
 
@@ -85,11 +85,14 @@ function setupCard(book, bookListDiv){
         removeBook(book);
     });
 
-    removeDiv.appendChild(removeBtn);
+    
     removeDiv.appendChild(removeLabel);
+    removeDiv.appendChild(removeBtn);
     bookCard.appendChild(removeDiv);
-    inputDiv.appendChild(inputBox);
+    
     inputDiv.appendChild(inputLabel);
+    inputDiv.appendChild(inputBox);
+
     optionsDiv.appendChild(inputDiv);
     optionsDiv.appendChild(removeDiv);
     bookCard.appendChild(optionsDiv); //finally adds the options div to our main bookCard div
