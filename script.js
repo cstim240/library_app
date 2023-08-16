@@ -1,3 +1,7 @@
+/**
+ * Date Modified/Branch Creation (of library-classes): Aug 15, 2023
+ * Purpose: To refactor existing code, organizing it with the concept of 'classes' in mind
+ */
 "use strict";
 let myLibrary = [];
 
