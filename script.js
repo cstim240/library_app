@@ -31,6 +31,9 @@ class Popup {
         closeBtn.addEventListener('click', () => {
             this.close();
         });
+
+
+
     }
 
     open(){
@@ -47,9 +50,23 @@ class Library {
     constructor(){
         this.myLibrary = [];
         this.popup = new Popup(document.querySelector(".popup"));
+
+        this.attachToSubmit();
     }
 
-    addBookToLibrary(title, author, pages, bookCompletion){
+    attachToSubmit(){
+        const submitBtn = document.getElementById("submitBtn");
+
+        submitBtn.addEventListener('click', () => {
+            this.addBookToLibrary();
+        });
+    }
+
+    addBookToLibrary(book){
+        const title = book.title;
+        const author = book.author;
+        const pages = book.pages;
+        const bookCompletion = book.bookCompletion;
         this.myLibrary.push(new Book(title, author, pages, bookCompletion));
         this.popup.close();
         this.clearValues();
@@ -112,7 +129,7 @@ class Library {
         removeBtn.classList.add("removeButton");
     
         removeBtn.addEventListener("click", function(){
-            removeBook(book);
+            this.removeBook(book);
         });
     
         
@@ -150,8 +167,11 @@ class Library {
 
 const library = new Library();
 
-library.addBookToLibrary("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
-library.addBookToLibrary("A Game Of Thrones", "George R.R. Martin", "694", true);
+const bookTemplate1 = new Book("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
+library.addBookToLibrary(bookTemplate1);
+
+const bookTemplate2 = new Book("A Game Of Thrones", "George R.R. Martin", "694", true);
+library.addBookToLibrary(bookTemplate2);
 
 
 
