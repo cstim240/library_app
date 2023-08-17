@@ -126,8 +126,8 @@ class Library {
         removeBtn.textContent = "X";
         removeBtn.classList.add("removeButton");
     
-        removeBtn.addEventListener("click", () => {
-            this.removeBook(book);
+        removeBtn.addEventListener("click", () => { //the arrow function preserves the value of 'this' from the enclosing scope
+            this.removeBook(book); //the arrow function captures the value of 'this' from the surrounding conttext, which is the 'Library' instance
         });
     
         
@@ -146,11 +146,11 @@ class Library {
 
     removeBook(book){
         //find the index of the book in the myLib array
-        const indexToRemove = myLibrary.indexOf(book);
+        const indexToRemove = this.myLibrary.indexOf(book);
     
         if (indexToRemove !== -1){ // we use -1 to represent if the element is not found in the myLibrary array
-            myLibrary.splice(indexToRemove, 1);
-            displayLibrary();
+            this.myLibrary.splice(indexToRemove, 1);
+            this.displayLibrary();
         }
     }
 
