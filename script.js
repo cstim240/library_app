@@ -14,16 +14,21 @@ class Book {
 }
 
 class Popup {
-    constructor(popupElement, addButton, closeButton){
+    constructor(popupElement){
         this.popupElement = popupElement;
+
+        this.attachEventListeners();
     }
 
     attachEventListeners(){
-        this.addButton.addEventListener('click', () => {
+        const openBtn = document.getElementById("newBookButton");
+        const closeBtn = document.getElementById("closeBtn");
+
+        openBtn.addEventListener('click', () => {
             this.open();
         });
 
-        this.closeButton.addEventListener('click', () => {
+        closeBtn.addEventListener('click', () => {
             this.close();
         });
     }
@@ -35,7 +40,6 @@ class Popup {
     close(){
         this.popupElement.classList.remove("open-popup"); //removes the popup
     }
-
 
 }
 
