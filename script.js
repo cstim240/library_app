@@ -18,11 +18,11 @@ class Popup {
         this.popupElement = popupElement;
     }
 
-    openPopup(){
+    open(){
         this.popupElement.classList.add("open-popup"); //makes the popup visible on the screen
     }
 
-    losePopup(){
+    close(){
         this.popupElement.classList.remove("open-popup"); //removes the popup
         clearValues();
     }
@@ -33,7 +33,7 @@ class Popup {
 class Library {
     constructor(){
         this.myLibrary = [];
-
+        this.popup = new Popup(document.querySelector(".popup"));
     }
 
     addBookToLibrary(title, author, pages, bookCompletion){
@@ -126,8 +126,21 @@ class Library {
         }
     }
 
+    openPopup(){
+        this.popup.open();
+    }
 
+    closePopup(){
+        this.popup.close();
+    }
 }
+
+const library = new Library();
+
+library.addBookToLibrary("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
+library.addBookToLibrary("A Game Of Thrones", "George R.R. Martin", "694", true);
+
+
 
 /*function Book(title, author, pages, bookCompletion) { //book obj constructor
     this.title = title, 
@@ -254,13 +267,12 @@ function closePopup(){
     clearValues();
 }*/
 
-
+/*
 //add premade book
 function addPremadeBook(title, author, pages, completion){
     myLibrary.push(new Book(title, author, pages, completion));
     displayLibrary();
-}
+}*/
 
-addPremadeBook("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
-addPremadeBook("A Game Of Thrones", "George R.R. Martin", "694", true);
+
 
