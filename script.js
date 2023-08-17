@@ -24,7 +24,6 @@ class Popup {
 
     close(){
         this.popupElement.classList.remove("open-popup"); //removes the popup
-        clearValues();
     }
 
 
@@ -38,9 +37,9 @@ class Library {
 
     addBookToLibrary(title, author, pages, bookCompletion){
         this.myLibrary.push(new Book(title, author, pages, bookCompletion));
-        closePopup();
-        clearValues();
-        displayLibrary();
+        this.popup.close();
+        this.clearValues();
+        this.displayLibrary();
     }
 
     clearValues(){
@@ -55,10 +54,10 @@ class Library {
         let bookListDiv = document.querySelector(".bookList");
         bookListDiv.innerHTML = ""; //clear previous content 
 
-        for (let i = 0; i < myLibrary.length; ++i){
+        for (let i = 0; i < this.myLibrary.length; ++i){
             bookCounter++;
-            let book = myLibrary[i];
-            setupCard(book, bookListDiv);
+            let book = this.myLibrary[i];
+            this.setupCard(book, bookListDiv);
         }
     }
 
