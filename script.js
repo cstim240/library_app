@@ -126,7 +126,7 @@ class Library {
         removeBtn.textContent = "X";
         removeBtn.classList.add("removeButton");
     
-        removeBtn.addEventListener("click", function(){
+        removeBtn.addEventListener("click", () => {
             this.removeBook(book);
         });
     
