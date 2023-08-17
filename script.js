@@ -32,8 +32,6 @@ class Popup {
             this.close();
         });
 
-
-
     }
 
     open(){
@@ -58,15 +56,15 @@ class Library {
         const submitBtn = document.getElementById("submitBtn");
 
         submitBtn.addEventListener('click', () => {
-            this.addBookToLibrary();
+            const title = document.getElementById("bookTitle").value;
+            const author = document.getElementById("bookAuthor").value;
+            const pages = document.getElementById("bookPages").value;
+            const bookCompletion = document.getElementById("finishedBook").value;
+            this.addBookToLibrary(title, author, pages, bookCompletion);
         });
     }
 
-    addBookToLibrary(book){
-        const title = book.title;
-        const author = book.author;
-        const pages = book.pages;
-        const bookCompletion = book.bookCompletion;
+    addBookToLibrary(title, author, pages, bookCompletion){
         this.myLibrary.push(new Book(title, author, pages, bookCompletion));
         this.popup.close();
         this.clearValues();
@@ -167,11 +165,9 @@ class Library {
 
 const library = new Library();
 
-const bookTemplate1 = new Book("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
-library.addBookToLibrary(bookTemplate1);
+library.addBookToLibrary("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
+library.addBookToLibrary("A Game Of Thrones", "George R.R. Martin", "694", true);
 
-const bookTemplate2 = new Book("A Game Of Thrones", "George R.R. Martin", "694", true);
-library.addBookToLibrary(bookTemplate2);
 
 
 
@@ -305,7 +301,11 @@ function closePopup(){
 function addPremadeBook(title, author, pages, completion){
     myLibrary.push(new Book(title, author, pages, completion));
     displayLibrary();
-}*/
+}
+
+addPremadeBook("Harry Potter and The Sorcerer's Stone", "J. K. Rowling", "309", false);
+addPremadeBook("A Game Of Thrones", "George R.R. Martin", "694", true);
+*/
 
 
 
