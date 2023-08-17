@@ -14,8 +14,18 @@ class Book {
 }
 
 class Popup {
-    constructor(popupElement){
+    constructor(popupElement, addButton, closeButton){
         this.popupElement = popupElement;
+    }
+
+    attachEventListeners(){
+        this.addButton.addEventListener('click', () => {
+            this.open();
+        });
+
+        this.closeButton.addEventListener('click', () => {
+            this.close();
+        });
     }
 
     open(){
